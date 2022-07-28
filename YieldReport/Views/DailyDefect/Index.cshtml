@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Yield Query System";
+    if (ViewData["Title"] != null)
+    {
+        <script>alert(ViewData["Massage"])</script>
+
+    }
+}
+
+<div class="interface">
+    <div class="intro">
+        <div class="top-area">
+            @*@using (Html.BeginForm("Upload", "Import", FormMethod.Post, new {enctype="multipart/form-data"}))*@
+            <td>
+                <b><lebel class="txt">Plant:</b>
+            </td>
+            <td>
+                <select id="Plant" style="width: 240px; height: 30px;">
+                    <option selected></option>
+                    <option value="ASES1">ASES1</option>
+                    <option value="ASES3">ASES3</option>
+                </select>
+            </td>
+
+            <td>
+                <b><lebel class="txt">Cust2Code:</b>
+            </td>
+            <td>
+                <select id="Cust2Code" style="width: 240px; height: 30px;">
+                    <option selected></option>
+                    <option value="QM">QM</option>
+                    <option value="UG">UG</option>
+                    <option value="X1">X1</option>
+                </select>
+            </td>
+
+            <td>
+                <b><lebel class="txt">Cust3Code:</b>
+            </td>
+            <td>
+                <select id="Cust3Code" style="width: 240px; height: 30px;">
+                    <option selected></option>
+                    <option value="QCM">QCM</option>
+                    <option value="USL">USL</option>
+                    <option value="SPX">SPX</option>
+                </select>
+            </td>
+
+            <td>
+                <b><lebel class="txt">PKG Code:</b>
+            </td>
+            <td>
+                <input type="text" name="txtPKGCode" style="width: 240px; height: 30px;">
+            </td>
+
+            <td>
+                <b><lebel class="txt">Device Name:</b>
+            </td>
+            <td>
+                <input type="text" name="txtDevice" style="width: 240px; height: 30px;">
+            </td>
+
+            <td>
+                <b><lebel class="txt">Date:</lebel></b>
+            </td>
+            <td>
+                <input id="txtDateStart" class="from-control hasDatepicker" type="date" style="width: 240px; height: 30px;">
+                <span class="txt"> to </span>
+                <input id="txtDateEnd" class="from-control hasDatepicker" type="date" style="width: 240px; height: 30px;">
+            </td>
+
+            <button id="buttonQuery" class="button1">Query</button>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#StageDailyDefect").addClass("active");
+        });
+    </script>
+}
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+

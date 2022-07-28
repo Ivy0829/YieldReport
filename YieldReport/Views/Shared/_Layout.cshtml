@@ -1,0 +1,147 @@
+﻿@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - YieldReport</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">YieldReport</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - YieldReport - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+    </html>*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    @*<title>@ViewData["Title"] - Yield Summary</title>*@
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(7, 76, 224) !important;">
+            <b><a class="mavbar-brand" style="color: white; margin-top: 8px; margin-right: -8px; font-size: 3em;">Yield Query System</a></b>
+        </nav>
+    </header>
+    <div class="navigation open">
+        <div class="menuToggle"></div>
+        <ul>
+            <b>
+            <li class="list" id="SummaryYield" style="--clr:#f44336;">
+                @*<a href="./Home/Index">*@
+                <a href="~/Home/Index">
+                @*<a href="https://localhost:44340/Home/Index">*@
+                    @*<a href="#">*@
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Yield Summary</span>
+                </a>
+            </li>
+            <li class="list" id="CloseYield" style="--clr:#2196f3;">
+                @*<a href="./CloseYieldbyLot/Index">*@
+                <a href="~/CloseYieldbyLot/Index">
+                    @*<a href="#">*@
+                    @*<a href="https://localhost:44340/CloseYieldbyLot/CloseYieldbyLot">*@
+                    <span class="icon"><ion-icon name="pricetag-outline"></ion-icon></span>
+                    <span class="text">Close Yield by Lot</span>
+                </a>
+            </li>
+            <li class="list" id="StageDailyYield" style="--clr:#ffa117;">
+                @*<a href="./DailyYield/Index">*@
+                @*<a href="https://localhost:44340/DailyYield/Index">*@
+                <a href="~/DailyYield/Index">
+                @*<a href="#">*@
+                    <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
+                    <span class="text">Daily Yield</span>
+                </a>
+            </li>
+            <li class="list" id="StageDailyDefect" style="--clr:#548C00; ">
+                @*<a href="./DailyDefect/Index">*@
+                @*<a href="https://localhost:44340/DailyDefect/Index">*@
+                <a href="~/DailyDefect/Index">
+                @*<a href="#">*@
+                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <span class="text">Daily Defect</span>
+                </a>
+            </li>
+            <li class="list" id="YieldSet" style="--clr: #C4C400; ">
+                @*<a href="./LowYieldSetting/Index">*@
+                <a href="~/LowYieldSetting/Index">
+                @*<a href="#">*@
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="text">Low Yield Notice Setting</span>
+                </a>
+            </li>
+            <li class="list" id="ImportData" style="--clr:#b145e9;">
+                @*<a href="./Import/Index">*@
+                <a href="~/Import/Index">
+                @*<a href="#">*@
+                    <span class="icon"><ion-icon name="cloud-upload-outline"></ion-icon></span>
+                    <span class="text">Import Raw Data</span>
+                </a>
+            </li>
+            </b>
+        </ul>
+    </div>
+
+    <div class="container">
+        @*<main role="main" class="pb-3">*@
+        @RenderBody()
+        @*</main>*@
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - YieldReport - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Index.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

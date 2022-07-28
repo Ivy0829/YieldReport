@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Yield Query System";
+    <!--if (ViewData["Title"] != null)
+    {-->
+    <!--@*<script>alert(ViewData["Massage"])</script>*@-->
+
+    <!--}-->
+}
+
+
+
+<div class="interface">
+    <div class="intro">
+        <div class="edit-area">
+            <td>
+                <b><lebel class="txt">PKG Code:</b>
+            </td>
+            <td>
+                <input type="text" name="txtPKGCode" style="width: 240px; height: 30px;">
+            </td>
+            <td>
+                <b><lebel class="txt">Device Name:</b>
+            </td>
+            <td>
+                <input type="text" name="txtDeviceName" style="width: 240px; height: 30px;">
+            </td>
+            <td>
+                <b><lebel class="txt">Yield Target(%):&ensp;&nbsp;<br>&ensp;&nbsp; Ex:99.5</br></b>
+            </td>
+            <td>
+                <input type="text" name="txtYieldTarget" style="width: 240px; height: 30px;">
+            </td>
+            <td>
+                <b><lebel class="txt">NoticeGroup:</b>
+            </td>
+            <td>
+                <textarea name="txtNoticeGroup" rows="5" cols="30"></textarea>
+            </td>
+            <button name="btnQuery" id="btnQuery" style="height:30px; width:60px;" type="button">Query</button>
+
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#YieldSet").addClass("active");
+        });
+    </script>
+}
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+@*<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>*@
+
+

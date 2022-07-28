@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Yield Query System";
+    if (ViewData["Title"] != null)
+    {
+        <script>alert(ViewData["Massage"])</script>
+
+    }
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Import Data</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<style>
+    .area {
+        background: rgb(213 213 213/0.2);
+        border-radius: 12px;
+        position: fixed;
+        inset: 72px 1200px 700px 300px;
+        display: flex;
+        /*align-content: stretch;*/
+        /*justify-content:space-evenly;*/
+        flex-direction: row;
+        align-items: baseline;
+        padding: 6px;
+        /*width: 80%*/
+    }
+
+    .area2 {
+        background: rgb(213 213 213/0.2);
+        border-radius: 12px;
+        position: fixed;
+        inset: 260px 1200px 500px 300px;
+        display: flex;
+        /*align-content: stretch;*/
+        /*justify-content:space-evenly;*/
+        flex-direction: row;
+        align-items: baseline;
+        padding: 6px;
+        /*width: 80%*/
+    }
+
+    .area3 {
+        background: rgb(213 213 213/0.2);
+        border-radius: 12px;
+        position: fixed;
+        inset: 462px 1200px 300px 300px;
+        display: flex;
+        /*align-content: stretch;*/
+        /*justify-content:space-evenly;*/
+        flex-direction: row;
+        align-items: baseline;
+        padding: 6px;
+        /*width: 80%*/
+    }
+</style>
+
+<div class="interface">
+
+
+
+    <div class="form-group col-sm">
+        <div class="area">
+            <form action="./UploadDailyRawData" enctype="multipart/form-data" method="post">
+                <b><p><label style="background-color: #00ff21; width: 240px; height: 30px; font-family: Calibri; font-size: 20px ">Daily Raw-Data</label></p></b>
+                <br></br>
+                <p><input type="file" class="form-control" name="file" /></p>
+                <br></br>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-group col-sm">
+        <div class="area2">
+            <form action="./Upload" enctype="multipart/form-data" method="post">
+                <b><p><label style="background-color: #0094ff; width: 240px; height: 30px; font-family: Calibri; font-size: 20px ">Close Yield by Lot</label></p></b>
+                <br></br>
+                <p><input type="file" class="form-control" name="file" /></p>
+                <br></br>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-group col-sm">
+        <div class="area3">
+            <form action="./Upload" enctype="multipart/form-data" method="post">
+                <b><p><label style="background-color: #faf519; width: 240px; height: 30px; font-family: Calibri; font-size: 20px ">Close Yield by Defect</label></p></b>
+                <br></br>
+                <p><input type="file" class="form-control" name="file" /></p>
+                <br></br>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#ImportData").addClass("active");
+        });
+    </script>
+}
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
